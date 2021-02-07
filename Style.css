@@ -1,0 +1,103 @@
+body {
+    background-image: url("img/fondo.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: rgb(5, 5, 5);
+    margin: 50px 0;
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 0 0 20px rgba(26, 13, 219, 0.582);
+}
+
+.fotos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#container:after {
+    content: "0";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#container div {
+    width: 28%;
+    height: auto;
+    -webkit-transition: -webkit-transform 1s;
+    display: inline;
+    float: left;
+    margin: 0px 3% 0 0;
+    padding: 0;
+}
+
+#container div img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px #666;
+    border: 5px solid rgba(40, 10, 209, 0.788)
+}
+
+
+#container div img~span {
+    width: 100%;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    margin: 0;
+    padding: 2px 5px;
+    color: rgb(8, 8, 8);
+    background: rgba(7, 19, 190, 0.822);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+}
+
+
+#container div img:hover+span {
+    opacity: 1;
+}
+
+
+#container:hover div {
+    opacity: 0.2;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+
+#container:hover div:hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+@media screen and (max-width:1000px) {
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+@media screen and (max-width:700px) {
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .image{
+        width: 48%;
+    }
+}
+@media screen and (max-width:450px) {
+h1 {
+    font-size: 22px;
+}
